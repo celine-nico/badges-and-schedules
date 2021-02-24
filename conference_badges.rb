@@ -1,1 +1,28 @@
 # Write your code here.
+
+def badge_maker(name)
+    "Hello, my name is #{name}."
+end 
+
+def batch_badge_creator(people)
+    people.collect do |person|
+        badge_maker(person)
+    end 
+end 
+
+def assign_rooms(people)
+    people.collect.with_index(1) do |person, index|
+        "Hello, #{person}! You'll be assigned to room #{index}!"
+    end 
+end 
+
+def printer(people)
+    batch_badge_creator(people).each do |badge|
+        puts badge 
+    end 
+    assign_rooms(people).each do |room|
+        puts room 
+    end 
+end 
+
+        
